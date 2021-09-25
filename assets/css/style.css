@@ -1,0 +1,168 @@
+/* Variables */
+:root {
+    --body-bg-color: unset;
+    --body-font-color: #091814;
+    --std-border: #163a16;
+    --hover-border: #1e7f20;
+    --std-link-color: #ad9612;
+    --light1: #afca2f;
+    --light2: #609e15;
+}
+
+/* Elements */
+
+body {
+    color: var(--body-font-color);
+    background-color: var(--body-bg-color);
+}
+
+a {
+    color: var(--std-link-color);
+    text-decoration: none;
+}
+
+/* Classy Elements */
+
+header.top {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.top h1 {
+    font-size: 300%;
+    /* color: var(--main-header-font-color); */
+}
+
+header.top nav {
+    width: 50%;
+    height: 4em;
+}
+
+header.top nav ul {
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.top nav ul li a {
+    font-family: monospace;
+    color: var(--main-header-font-color);
+    font-size: 170%;
+    display: flex;
+    border: 3px solid var(--std-border);
+    padding: 0.5% 2%;
+    width: 150px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header.top nav ul li a:hover {
+    font-size: 175%;
+    box-shadow: 0 0 10px #000;
+    border-color: var(--hover-border);
+}
+
+header.top nav ul li a:active {
+    font-size: 150%;
+}
+
+header.top nav ul li a:focus {
+}
+
+#banner {
+    height: 300px;
+    background-image: url(../image/green.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.banner-text {
+    position: relative;
+    right: 5em;
+    bottom: 3em;
+    font-size: 150%;
+    padding: 0.5em;
+    background-color: var(--light1);
+    transform: skew(5deg);
+    box-shadow: 0 0 10px var(--light2);
+}
+
+main {
+
+}
+
+/* Main Sections */
+
+main section:first-child {
+    margin-top: 15px;
+}
+
+#about-me {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+#about-me header {
+    padding-right: 2%;
+    margin-left: 5%;
+    margin-right: 3%;
+    border-right: 4px solid var(--std-border);
+}
+
+#about-me header h2 {
+    font-size: 150%;
+}
+
+#about-me p {
+
+}
+
+#work {
+
+}
+
+#work header {
+
+}
+
+#work header h2 {
+
+}
+
+#work .work-item {
+
+}
+
+#work .work-item h3 {
+
+}
+
+#work .work-item p {
+
+}
+
+#contact-me {
+
+}
+
+#contact-me header {
+
+}
+
+#contact-me header h2 {
+
+}
+
+#contact-me p {
+
+}
