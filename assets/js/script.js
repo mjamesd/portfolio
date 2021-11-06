@@ -5,6 +5,7 @@
 // See README.md for more information
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
- $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
+
+$(document).ready(function () {
+  $('.sidenav').sidenav();
+});

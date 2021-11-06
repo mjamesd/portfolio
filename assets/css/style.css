@@ -19,6 +19,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 64px; /* height of sticky header */
 }
 
 body {
@@ -38,7 +39,7 @@ body {
 }
 
 nav {
-    background-color: var(--purple-bg-color)!important;
+    background-color: var(--purple-bg-color) !important;
 }
 
 main {
@@ -63,29 +64,62 @@ footer a:hover {
 nav img {
     width: 50px;
     float: left;
-    border-radius: 50%;
     padding-top: 5px;
     margin: 0 15px;
-    box-shadow: 0 0 25px var(--body-font-color);
-    transition: all 0.4s ease-in-out;
-}
-
-nav img:hover {
-    transform: rotate(-5deg);
-    box-shadow: 0 0 75px;
+    clip-path: circle(45% at 50% 55%);
 }
 
 nav ul a {
-    font-size: 1.2rem!important;
+    font-size: 1.2rem !important;
+}
+
+h3, h4 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+h3.header {
+    opacity: 0;
+    cursor: default;
+    margin-top: 0.5rem;
+    line-height: 0px;
+}
+
+h4 {
+    margin-top: 0.4rem !important;
+}
+
+img#profile-pic {
+    width: 250px;
+    filter: brightness(100%) !important;
 }
 
 /* Classes */
-.my-logo {
-    font-family: 'Norican', cursive;
-    border: 2px solid var(--def-link-color);
-    border-radius: 50%;
-    padding: 0 10px;
-    margin: 0 15px;
+
+.site-purple {
+    background-color: var(--purple-bg-color);
+}
+
+.site-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+
+.site-row-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.site-fswd-highlight {
+    color: var(--purple-highlight-color);
+    text-decoration: underline;
+    border-radius: 5px;
+    padding: 5px 2px 3px 2px;
+}
+
+.site-fswd-highlight:hover {
+    text-decoration: none;
+    box-shadow: 3px 3px 3px;
 }
 
 #banner {
@@ -129,35 +163,57 @@ nav .brand-logo {
     font-family: 'Permanent Marker', cursive;
 }
 
+.sidenav-overlay {
+    z-index: 996 !important;
+}
+
 span.badge.new {
-    background-color: var(--light2)!important;
+    background-color: var(--light2) !important;
     font-family: 'Special Elite', cursive;
 }
 
-.left-content {
-    font-family: 'Permanent Marker', cursive;
-    text-align: right;
-    /* border-right: 4px solid var(--purple-bg-color); */
-}
-
-.right-content {
-    border-left: 4px solid var(--purple-bg-color);
-}
-
 .card .card-title {
-    background-color: var(--purple-bg-color)!important;
+    background-color: var(--purple-bg-color) !important;
+    padding: 12px 24px !important;
+    margin: 5px;
+}
+
+.card .card-image img {
+    padding: 5px !important;
+    border-radius: 15px !important;
+    filter: brightness(75%);
+    transition: filter 0.4s ease-in-out;
+}
+
+.card:hover .card-image img {
+    filter: brightness(100%);
 }
 
 .my-fab {
     background-color: var(--purple-highlight-color) !important;
+    bottom: -15px !important;
+}
+
+.my-fab:hover {
+    background-color: var(--purple-bg-color) !important;
+    box-shadow: 3px 3px 5px #000;
 }
 
 .preview-fab-btn {
     right: 75px !important;
 }
 
+.contact-me-item {
+    text-align: center;
+}
+
+.contact-me-item i {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+
 .page-footer {
-    background-color: var(--purple-bg-color)!important;
+    background-color: var(--purple-bg-color) !important;
 }
 
 /* Media queries */
@@ -174,33 +230,17 @@ span.badge.new {
     main {
         width: 85%;
     }
-    h3 {
-        font-size: 1.92rem;
-    }
-    #banner img {
-        width: 100px;
-    }
-    .left-content {
-        border: unset;
+    h4 {
+        font-size: 1.65rem;
     }
 }
 
-@media screen and (max-width: 638px) {
+@media screen and (max-width: 655px) {
     nav img {
         display: none;
     }
-    h3 {
-        font-size: 1.92rem;
-    }
-    #banner img {
-        width: 125;
-        left: 2rem;
-    }
-    .banner-text {
-        top: 1rem;
-    }
-    .left-content {
-        border: unset;
+    section#my-work .card-title {
+        font-size: 12px;
     }
 }
 
@@ -211,17 +251,14 @@ span.badge.new {
     main {
         width: 100%;
     }
-    h3 {
-        font-size: 1.92rem;
+    .site-container {
+        display: block;
     }
-    #banner img {
-        width: 125;
-        left: 2rem;
+    h4 {
+        font-size: 2.1rem;;
     }
-    .banner-text {
-        top: 0rem;
-    }
-    .left-content {
-        border: unset;
+
+    .card.horizontal {
+        flex-direction: column;
     }
 }
