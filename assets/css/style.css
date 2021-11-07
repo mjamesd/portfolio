@@ -189,6 +189,10 @@ span.badge.new {
     filter: brightness(100%);
 }
 
+.card .card-content p:last-child {
+    margin-top: 10px;
+}
+
 .my-fab {
     background-color: var(--purple-highlight-color) !important;
     bottom: -15px !important;
@@ -221,6 +225,9 @@ span.badge.new {
     h3 {
         font-size: 1.92rem;
     }
+    article.card-content {
+        height: unset;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -233,6 +240,9 @@ span.badge.new {
     h4 {
         font-size: 1.65rem;
     }
+    article.card-content {
+        height: unset;
+    }
 }
 
 @media screen and (max-width: 655px) {
@@ -240,7 +250,10 @@ span.badge.new {
         display: none;
     }
     section#my-work .card-title {
-        font-size: 12px;
+        font-size: 20px;
+    }
+    article.card-content {
+        height: unset;
     }
 }
 
@@ -257,8 +270,10 @@ span.badge.new {
     h4 {
         font-size: 2.1rem;;
     }
-
     .card.horizontal {
         flex-direction: column;
+    }
+    article.card-content {
+        height: unset;
     }
 }
