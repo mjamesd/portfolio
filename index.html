@@ -2,123 +2,338 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mark Drummond | Portfolio | Web Developer</title>
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="shortcut icon" href="./assets/image/d.png" />
-  <script src="./assets/js/script.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/img/d.png" />
+    <!-- TITLE -->
+    <title>Mark Drummond | Portfolio | Full-Stack Web Developer</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+        integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.min.css"
+        integrity="sha512-oM24YOsgj1yCDHwW895ZtK7zoDQgscnwkCLXcPUNsTRwoW1T1nDIuwkZq/O6oLYjpuz4DfEDr02Pguu68r4/3w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+        integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Permanent+Marker&family=Special+Elite&family=Norican&family=Material+Icons&display=swap" />
 </head>
 
 <body>
 
-    <header class="top">
-        <h1>Mark Drummond</h1>
-        <nav>
-            <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact-me">Contact Me</a></li>
-                <li><a href="#resume">Resum&eacute;</a></li>
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo"><span class="my-logo"><img
+                                src="./assets/img/d.png" /></span>Mark&nbsp;Drummond</a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="#about-me"><i class="material-icons left">account_circle</i>About Me</a></li>
+                        <li><a href="#my-work"><i class="material-icons left">web</i>My Work <span
+                                    class="new badge pulse">3</span></a></li>
+                        <li><a href="#contact-me"><i class="material-icons left">phonelink_ring</i>Contact Me</a></li>
+                        <li><a href="#resume"><i class="material-icons left">business_center</i>Resum&eacute;</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <ul class="sidenav" id="mobile-nav">
+                <li><a class="sidenav-close" href="#about-me">About Me</a></li>
+                <li><a class="sidenav-close" href="#my-work">My Work</a></li>
+                <li><a class="sidenav-close" href="#contact-me">Contact Me</a></li>
+                <li><a class="sidenav-close" href="#resume">Resum&eacute;</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
 
-    <div id="banner"><!-- CSS img banner -->
-        <img src="./assets/image/markdrummond.jpg" />
-        <div class="banner-text">
-            Finished Websites Faster Than an Unladen Swallow
-        </div>
-    </div>
-
     <main>
-        <section id="about-me" class="content-section">
-            <header>
-                <h2>About Me</h2>
-            </header>
-            <div>
-                <p>
-                    I'm a thirty-something new dad from Kansas City, Kansas. I graduated from the University of Kansas in 2009 with a degree in Political Science. My wife and I moved to Seattle shortly after graduation and I got a job at the University of Washington performing data entry for a series of pandemic swine flu vaccine clinical trials. I quickly became a jack-of-all-trades for the clinic, expanding my role to local IT support and coordinating trials myself and with the team. Now I'm working towards a certificate in Full Stack Web Development through the University of Washington.
-                </p>
+        <section id="about-me" class="section row" data-label="about-me">
+            <div class="col s12">
+                <h3 class="header">About Me</h3>
+            </div>
+            <div class="col s12 site-container">
+                <div class="col s12 m4">
+                    <div class="card-panel site-purple hoverable">
+                        <h4 class="white-text">Full Stack Web Developer</h4>
+                        <span class="white-text">HTML5, accessible web, CSS3, Bootstrap, Materialize, JavaScript,
+                            jQuery, Express, PHP, MySQL, & Apache web server</span>
+                    </div>
+                </div>
+                <div class="col s12 m8">
+                    <div class="card horizontal hoverable">
+                        <div class="card-image">
+                            <img id="profile-pic" src="./assets/img/markdrummond.jpg" />
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p>
+                                    I'm a thirty-something new dad from Kansas City, Kansas, living in Seattle and
+                                    following my passion as a <span class="site-fswd-highlight">full-stack web
+                                        developer</span>. I <a href="#my-work">create responsive websites and content
+                                        management systems</a> for clients big and small. I want to work with your
+                                    farmer's market stand, small business, university department, or development firm to
+                                    create a meaningful product that meets yours and your customers' needs. Contact me
+                                    today to discuss your next website!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="work" class="content-section">
-            <header>
-                <h2>Work</h2>
+        <section id="my-work" class="row">
+            <header class="col s12">
+                <h3>My Work</h3>
             </header>
-            <section class="work-items-container">
-                <a href="http://depts.washington.edu/vrc" target="_blank">
-                    <section class="work-item" data-id="vrc">
-                        <div class="work-item-title">
-                            <h3>UW Virology Research Clinic</h3>
-                            <p>LAMP Website</p>
+            <div class="col s12">
+                <!-- FIRST ROW -->
+                <div class="row" data-label="my-work-1">
+                    <section class="col s12 m7" data-label="tunespace">
+                        <div class="card hoverable">
+                            <header class="card-image">
+                                <img src="./assets/img/TuneSpace.png" alt="TuneSpace" />
+                                <span class="card-title"><span class="new badge pulse"></span> TuneSpace</span>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
+                                    href="https://mjamesd.github.io/crispy-happiness/" target="_blank"><i
+                                        class="material-icons">preview</i></a>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
+                                    href="https://github.com/mjamesd/crispy-happiness" target="_blank"><i
+                                        class="material-icons">integration_instructions</i></a>
+                            </header>
+                            <article class="card-content">
+                                <p>
+                                    A mobile-responsive, API-driven, jQuery and Materialize website that provides
+                                    biographies, discographies, and lyrics for musicians of all genres. By pulling data
+                                    from various databases we created a centralized hub where users can explore their
+                                    favorite artists and discover new music.
+                                </p>
+                            </article>
+                            <aside class="card-action">
+                                Developed in a team setting as coursework.
+                            </aside>
                         </div>
                     </section>
-                </a>
-                <a href="https://mjamesd.github.io/homework01/" target="_blank">
-                    <section class="work-item" data-id="refactor">
-                        <div class="work-item-title">
-                            <h3>Code Refactor</h3>
-                            <p>Making the Web Accessible</p>
+                    <section class="col s12 m5" data-label="weather-dashboard">
+                        <div class="card hoverable">
+                            <header class="card-image">
+                                <img src="./assets/img/weather-dashboard.png" />
+                                <span class="card-title"><span class="new badge pulse"></span> Weather Dashboard</span>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
+                                    href="https://mjamesd.github.io/weather-dashboard/" target="_blank"><i
+                                        class="material-icons">preview</i></a>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
+                                    href="https://github.com/mjamesd/weather-dashboard" target="_blank"><i
+                                        class="material-icons">integration_instructions</i></a>
+                            </header>
+                            <article class="card-content">
+                                <p>
+                                    An API-driven jQuery and Bootstrap webapp to check the weather. The user's searches
+                                    are saved and can be recalled at the click of a button.
+                                </p>
+                            </article>
+                            <aside class="card-action">
+                                Developed individually as coursework.
+                            </aside>
                         </div>
                     </section>
-                </a>
-                <a href="http://uwvteu.org/" target="_blank">
-                    <section class="work-item" data-id="vteu">
-                        <div class="work-item-title">
-                            <h3>Seattle VTEU</h3>
-                            <p>WordPress Website</p>
+                </div>
+                <!-- SECOND ROW -->
+                <div class="row" data-label="my-work-2">
+                    <section class="col s12 m4 l4" data-label="seattle-vteu">
+                        <div class="card hoverable">
+                            <header class="card-image">
+                                <img src="./assets/img/vteu.png" />
+                                <span class="card-title flow-text">Seattle VTEU</span>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
+                                    href="http://uwvteu.org/" target="_blank"><i class="material-icons">preview</i></a>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab disabled"
+                                    target="_blank"><i class="material-icons">integration_instructions</i></a>
+                            </header>
+                            <article class="card-content">
+                                <p>
+                                    A Wordpress website for a COVID-19 vaccine clinical trial center in Seattle,
+                                    Wa.
+                                </p>
+                            </article>
+                            <aside class="card-action">
+                                Proprietary code unavailable.
+                            </aside>
                         </div>
                     </section>
-                </a>
-                <a href="https://mjamesd.github.io/prework-my-bands/" target="_blank">
-                    <section class="work-item" data-id="muse">
-                        <div class="work-item-title">
-                            <h3>Muse Fanpage</h3>
-                            <p>Mark's favorite band</p>
+                    <section class="col s12 m8 l8" data-label="uw-vrc">
+                        <div class="card hoverable">
+                            <header class="card-image">
+                                <img src="./assets/img/vrc.png" />
+                                <span class="card-title flow-text">UW Virology Research Clinic</span>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
+                                    href="http://depts.washington.edu/vrc" target="_blank"><i
+                                        class="material-icons">preview</i></a>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab disabled"
+                                    target="_blank"><i class="material-icons">integration_instructions</i></a>
+                            </header>
+                            <article class="card-content">
+                                <p>
+                                    A full-stack content management system and public-facing website for an infectious
+                                    disease research clinic in Seattle, Wa, using custom PHP, the CakePHP MVC framework,
+                                    CSS, JavaScript, and MySQL.
+                                </p>
+                            </article>
+                            <aside class="card-action">
+                                Proprietary code unavailable.
+                            </aside>
                         </div>
                     </section>
-                </a>
-                <a href="https://mjamesd.github.io/rock-paper-scissors/" target="_blank">
-                    <section class="work-item" data-id="js-rps">
-                        <div class="work-item-title">
-                            <h3>Rock, Paper, Scissors</h3>
-                            <p>JavaScript Game</p>
+                </div>
+                <!-- THIRD ROW -->
+                <div class="row" data-label="my-work-3">
+                    <section class="col s12 m4 l4" data-label="workday-scheduler">
+                        <div class="card hoverable">
+                            <header class="card-image">
+                                <img src="./assets/img/workday-scheduler.png" />
+                                <span class="card-title flow-text">Workday Scheduler</span>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
+                                    href="https://mjamesd.github.io/workday-scheduler/" target="_blank"><i
+                                        class="material-icons">preview</i></a>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
+                                    href="https://github.com/mjamesd/workday-scheduler" target="_blank"><i
+                                        class="material-icons">integration_instructions</i></a>
+                            </header>
+                            <article class="card-content">
+                                <p>
+                                    A productivity tool for busy professionals. Saves the user's productivity notes
+                                    across browsing sessions using jQuery and Moment.js.
+                                </p>
+                            </article>
+                            <aside class="card-action">
+                                Developed individually as coursework.
+                            </aside>
                         </div>
                     </section>
-                </a>
-            </section>
-        </section>
-        <section id="contact-me" class="content-section">
-            <header>
-                <h2>Contact Me</h2>
-            </header>
-            <div>
-                <p class="contact-me-item"><a href="tel:19137070806" target="_blank">913-707-0806</a></p>
-                <p class="contact-me-item"><a href="mailto:mjamesd@gmail.com?subject=Portfolio Interest" target="_blank">mjamesd@gmail.com</a></p>
-                <p class="contact-me-item"><a href="https://github.com/mjamesd" target="_blank">GitHub</a></p>
-                <p class="contact-me-item"><a href="https://www.linkedin.com/in/markjdrummond" target="_blank">LinkedIn</a></p>
-                <p class="contact-me-item"><a href="https://twitter.com/mjamesd_206" target="_blank">Twitter</a></p>
+                    <section class="col s12 m4 l4" data-label="timed-quiz">
+                        <div class="card hoverable">
+                            <header class="card-image">
+                                <img src="./assets/img/timed-quiz.png" />
+                                <span class="card-title flow-text"><span class="new badge pulse"></span> So You Think
+                                    You Can Code?</span>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
+                                    href="https://mjamesd.github.io/timed-quiz/index.html" target="_blank"><i
+                                        class="material-icons">preview</i></a>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
+                                    href="https://github.com/mjamesd/timed-quiz" target="_blank"><i
+                                        class="material-icons">integration_instructions</i></a>
+                            </header>
+                            <article class="card-content">
+                                <p>
+                                    Play America's <em>favorite</em> new gameshow! Answer the questions in the time
+                                    available -- but watch out if you get one wrong, because you'll lose 10 seconds on
+                                    the clock! Champions can enter their initials into their own Hall of Fame.
+                                </p>
+                                <p>
+                                    Demostration of time intervals, browser storage, and responsive design using
+                                    Javascript and CSS.
+                                </p>
+                            </article>
+                            <aside class="card-action">
+                                Developed individually as coursework.
+                            </aside>
+                        </div>
+                    </section>
+                    <section class="col s12 m4 l4" data-label="password-generator">
+                        <div class="card hoverable">
+                            <header class="card-image">
+                                <img src="./assets/img/password-generator.png" />
+                                <span class="card-title flow-text">Password Generator</span>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
+                                    href="https://mjamesd.github.io/password-generator/" target="_blank"><i
+                                        class="material-icons">preview</i></a>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
+                                    href="https://github.com/mjamesd/password-generator" target="_blank"><i
+                                        class="material-icons">integration_instructions</i></a>
+                            </header>
+                            <article class="card-content">
+                                <p>
+                                    Generate a secure password by following a few prompts. Asks the user some questions
+                                    and outputs a randomized password string. The user can click it or the button to
+                                    copy.
+                                </p>
+                                <p>
+                                    Demonstration of JavaScript and responsive design with CSS.
+                                </p>
+                            </article>
+                            <aside class="card-action">
+                                Developed individually as coursework.
+                            </aside>
+                        </div>
+                    </section>
+                </div>
             </div>
         </section>
-        <section id="resume" class="content-section">
-            <header>
-                <h2>Resum&eacute;</h2>
-            </header>
-            <div>
-                <p>Resum&eacute; available upon request.</p>
-                <!-- <p>&nbsp;</p> -->
+        <section id="contact-me" class="row">
+            <div class="col s12">
+                <h3>Contact Me</h3>
+            </div>
+            <div class="col s12 site-row-container">
+                <p class="contact-me-item"><a href="tel:19137070806" target="_blank"><i
+                            class="fas fa-phone-square"></i><br />913-707-0806</a></p>
+                <p class="contact-me-item"><a href="mailto:mjamesd@gmail.com?subject=Portfolio Interest"
+                        target="_blank"><i class="fas fa-envelope"></i></a></p>
+                <p class="contact-me-item"><a href="https://github.com/mjamesd" target="_blank"><i
+                            class="fab fa-github"></i></a></p>
+                <p class="contact-me-item"><a href="https://www.linkedin.com/in/markjdrummond" target="_blank"><i
+                            class="fab fa-linkedin"></i></a></p>
+                <p class="contact-me-item"><a href="https://twitter.com/mjamesd_206" target="_blank"><i
+                            class="fab fa-twitter-square"></i></a></p>
+            </div>
+        </section>
+        <section id="resume" class="row">
+            <div class="col s12">
+                <h3>My Resum&eacute;</h3>
+            </div>
+            <div class="col s12 site-row-container">
+                <p>Resum&eacute; available for download <a href="./assets/img/Mark Drummond_Resume.pdf"
+                        target="_blank">here</a>a. In the meantime, please see my <a
+                        href="https://www.linkedin.com/in/markjdrummond/" target="_blank">LinkedIn profile</a>.</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2021 DrumDev</p>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 DrumDev
+                <a class="grey-text text-lighten-4 right" href="https://pngtree.com/free-backgrounds"
+                    target="_blank">background images from pngtree.com</a>
+            </div>
+        </div>
     </footer>
 
-    <aside class="to-top">
-        <p><a href="#"><img src="./assets/image/arrow-up.png" alt="Go to top" /></a></p>
-    </aside>
+    <!-- JAVASCRIPT -->
+    <!-- CDN SOURCES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+        integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+        integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.1/readmore.min.js"
+        integrity="sha512-HzK/KDSaVfdeH8AynloB8uceDESseASuyy/tOU/2fM3lDJlQN289yZ6UsB9p7EFRpGnDRg49p3UKGfE7ulr2Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- LOCAL SOURCES -->
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
