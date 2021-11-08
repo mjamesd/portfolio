@@ -39,7 +39,7 @@ body {
 }
 
 nav {
-    background-color: var(--purple-bg-color) !important;
+    background-color: var(--purple-bg-color) !important; /* override Materialize default */
 }
 
 main {
@@ -70,10 +70,10 @@ nav img {
 }
 
 nav ul a {
-    font-size: 1.2rem !important;
+    font-size: 1.2rem !important; /* override Materialize default */
 }
 
-h3, h4 {
+h2, h3, h4 {
     font-family: 'Permanent Marker', cursive;
 }
 
@@ -85,12 +85,12 @@ h3.header {
 }
 
 h4 {
-    margin-top: 0.4rem !important;
+    margin-top: 0.4rem !important; /* override Materialize default */
 }
 
 img#profile-pic {
     width: 250px;
-    filter: brightness(100%) !important;
+    filter: brightness(100%) !important; /* override Materialize default */
 }
 
 /* Classes */
@@ -164,23 +164,23 @@ nav .brand-logo {
 }
 
 .sidenav-overlay {
-    z-index: 996 !important;
+    z-index: 996 !important; /* override Materialize default */
 }
 
 span.badge.new {
-    background-color: var(--light2) !important;
+    background-color: var(--light2) !important; /* override Materialize default */
     font-family: 'Special Elite', cursive;
 }
 
 .card .card-title {
-    background-color: var(--purple-bg-color) !important;
-    padding: 12px 24px !important;
+    background-color: var(--purple-bg-color) !important; /* override Materialize default */
+    padding: 12px 24px !important; /* override Materialize default */
     margin: 5px;
 }
 
 .card .card-image img {
-    padding: 5px !important;
-    border-radius: 15px !important;
+    padding: 5px !important; /* override Materialize default */
+    border-radius: 15px !important; /* give the  */
     filter: brightness(75%);
     transition: filter 0.4s ease-in-out;
 }
@@ -194,30 +194,57 @@ span.badge.new {
 }
 
 .my-fab {
-    background-color: var(--purple-highlight-color) !important;
-    bottom: -15px !important;
+    background-color: var(--purple-highlight-color) !important; /* override Materialize default */
+    bottom: -15px !important; /* override Materialize default */
 }
 
 .my-fab:hover {
-    background-color: var(--purple-bg-color) !important;
+    background-color: var(--purple-bg-color) !important; /* override Materialize default */
     box-shadow: 3px 3px 5px #000;
 }
 
 .preview-fab-btn {
-    right: 75px !important;
+    right: 75px !important; /* Materialize doesn't expect more than one, so we have to move one over. */
 }
 
-.contact-me-item {
+.carousel {
     text-align: center;
 }
 
-.contact-me-item i {
+.carousel a.active {
+    color: var(--purple-bg-color);
+}
+
+.carousel-item {
+    /* height: unset !important; override Materialize default */
+}
+
+/* a.carousel-item img {
+    width: 1px !important;
+} */
+
+a.carousel-item i {
+    transition: all 0.4s ease-in-out;
+}
+
+a.carousel-item:hover {
+    border-bottom: unset;
+}
+
+a.carousel-item:hover i {
+    font-size: 4.4rem;
+}
+
+.carousel-item i {
     font-size: 4rem;
     padding-bottom: 1rem;
 }
 
+/* img.contact-me-item {
+} */
+
 .page-footer {
-    background-color: var(--purple-bg-color) !important;
+    background-color: var(--purple-bg-color) !important; /* override Materialize default */
 }
 
 /* Media queries */
@@ -249,7 +276,7 @@ span.badge.new {
     nav img {
         display: none;
     }
-    section#my-work .card-title {
+    section#projects .card-title {
         font-size: 20px;
     }
     article.card-content {
