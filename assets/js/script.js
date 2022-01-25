@@ -13,7 +13,10 @@ const equalizeRowItems = (dataLabel) => {
     let rowCardHeight = 0;
     for (let projectItem of targetEls) {
       $(projectItem).removeAttr('style');
+    }
+    for (let projectItem of targetEls) {
       let thisHeight = $(projectItem).outerHeight(true);
+      console.info($(projectItem), thisHeight);
       if (thisHeight > rowCardHeight) {
         rowCardHeight = thisHeight;
       }
@@ -23,6 +26,7 @@ const equalizeRowItems = (dataLabel) => {
         $(projectItem).attr('style', `height: ${rowCardHeight}px;`);
       }
     }
+    console.info('final calc: ', rowCardHeight);
   }
 };
 
@@ -34,12 +38,12 @@ const equalizeAboutMe = () => {
     let cardPanelHeight = $('#about-me').find('.card-panel').outerHeight(true);
     let targetHeight = 0;
     if (cardContentHeight > cardPanelHeight) {
-      $('#about-me').find('.card-panel').outerHeight(cardContentHeight, false);
+      targetHeight = cardContentHeight;
     } else {
-      $('#about-me').find('.card-content').outerHeight(cardPanelHeight, true);
+      targetHeight = cardPanelHeight;
     }
-    // let targetHeight = $('#about-me').find('.card-content').outerHeight(true);
-    // $('#about-me').find('.card-panel').outerHeight(targetHeight, false);
+    $('#about-me').find('.card-panel').outerHeight(targetHeight, false);
+    $('#about-me').find('.card-content').outerHeight(targetHeight, true);
   }
 };
 
@@ -53,19 +57,21 @@ $(document).ready(() => {
 
   // Dynamically set the height of specific cards to make row items equal in height
   // Materialize's CSS makes it impossible to do without JavaScript?
-  equalizeAboutMe();
-  equalizeRowItems('project-row-3');
+  // $(window).trigger('resize');
+  // equalizeAboutMe();
+  // equalizeRowItems('project-row-3');
 });
 
 // On window resize, re-calculate heights and re-set the element heights
-$(window).resize(() => {
-  // Remove `height` style if window is mobile-size
-  if ($(window).width() < 576) {
-    for (let projectItem of $(".row").find('article.card-content')) {
-      $(projectItem).removeAttr('style');
-    }
-    $("#about-me").find('.card-panel').removeAttr('style');
-  }
-  equalizeAboutMe();
-  equalizeRowItems('project-row-3');
-});
+// $(window).resize(() => {
+//   // Remove `height` style if window is mobile-size
+//   if ($(window).width() < 576) {
+//     for (let projectItem of $(".row").find('article.card-content')) {
+//       $(projectItem).removeAttr('style');
+//     }
+//     $("#about-me").find('.card-content').removeAttr('style');
+//     $("#about-me").find('.card-panel').removeAttr('style');
+//   }
+//   equalizeAboutMe();
+//   equalizeRowItems('project-row-3');
+// });

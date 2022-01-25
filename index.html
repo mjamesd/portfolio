@@ -44,7 +44,7 @@
                                     class="new badge pulse">3</span></a></li>
                         <li><a href="#contact-me"><i class="material-icons left">phonelink_ring</i>Contact Me</a></li>
                         <li><a href="#resume"><i class="material-icons left">business_center</i>Resum&eacute; <span
-                                    class="new badge pulse"></span></a></li>
+                                    class="new badge pulse darkgold" data-badge-caption="updated Jan 2022"></span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -60,33 +60,37 @@
 
     <main>
         <section id="about-me" class="section row" data-label="about-me">
-            <div class="col s12">
-                <h3 class="header">About Me</h3>
-            </div>
-            <div class="col s12 site-container">
-                <div class="col s12 m4">
-                    <div class="card-panel site-purple hoverable">
-                        <h4 class="white-text">Full Stack Web Developer</h4>
-                        <span class="white-text">HTML5, accessible web, CSS3, Bootstrap, Materialize, JavaScript,
-                            jQuery, Express, PHP, MySQL, & Apache web server</span>
-                    </div>
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="header">About Me</h3>
                 </div>
-                <div class="col s12 m8">
-                    <div class="card horizontal hoverable">
-                        <div class="card-image">
-                            <img id="profile-pic" src="./assets/img/markdrummond.jpg" />
+            </div>
+            <div class="row">
+                <div class="col s12 site-container">
+                    <div class="col s12 m4">
+                        <div class="card-panel site-purple hoverable">
+                            <h4 class="white-text">Full Stack Web Developer</h4>
+                            <span class="white-text">HTML5, accessible web, CSS3, Bootstrap, Materialize, JavaScript,
+                                Express, Node.js, jQuery, PHP, MySQL, & WordPress</span>
                         </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>
-                                    I'm a thirty-something new dad from Kansas City, Kansas, living in Seattle and
-                                    following my passion as a full-stack web
-                                    developer. I <a href="#projects">create responsive websites and content
-                                        management systems</a> for clients big and small. I want to work with your
-                                    farmer's market stand, small business, university department, or development firm to
-                                    create a meaningful product that meets yours and your customers' needs. Contact me
-                                    today to discuss your next website!
-                                </p>
+                    </div>
+                    <div class="col s12 m8">
+                        <div class="card horizontal hoverable">
+                            <div class="card-image">
+                                <img id="profile-pic" src="./assets/img/markdrummond.jpg" />
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content">
+                                    <p>
+                                        I'm a thirty-something new dad from Kansas City, Kansas, living in Seattle and
+                                        following my passion as a full-stack web
+                                        developer. I <a href="#projects">create responsive websites and content
+                                            management systems</a> for clients big and small. I want to work with your
+                                        farmer's market stand, small business, university department, or development firm to
+                                        create a meaningful product that meets yours and your customers' needs. Contact me
+                                        today to discuss your next website!
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -100,11 +104,37 @@
             <div class="col s12">
                 <!-- FIRST ROW -->
                 <div class="row" data-label="project-row-1">
-                    <section class="col s12 m7" data-label="tunespace">
+                    <section class="col s12 m7" data-label="pressed-words">
+                        <div class="card hoverable">
+                            <header class="card-image">
+                                <img src="./assets/img/pressed-words.png" alt="Pressed Words" />
+                                <span class="card-title"><span class="new badge pulse"></span> Pressed Words</span>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
+                                    href="https://jubilant-robot-206.herokuapp.com" target="_blank"><i
+                                        class="material-icons">preview</i></a>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
+                                    href="https://github.com/mjamesd/jubilant-robot" target="_blank"><i
+                                        class="material-icons">integration_instructions</i></a>
+                            </header>
+                            <article class="card-content">
+                                <p>
+                                    A blog app with an MVC content management system using Express.js as the back end,
+                                    Handlbars as the front end, and MySQL as the database. It utilizes asynchronous
+                                    JavaScript functions and performs CRUD functions (Create, Read, Update, and Delete)
+                                    on users, posts, and comments. The app uses the MySQL2, Express, Express-Handlebars,
+                                    Express-Session, dotenv, and Sequelize Node.js packages.
+                                </p>
+                            </article>
+                            <aside class="card-action">
+                                Developed individually setting as coursework.
+                            </aside>
+                        </div>
+                    </section>
+                    <section class="col s12 m5" data-label="tunespace">
                         <div class="card hoverable">
                             <header class="card-image">
                                 <img src="./assets/img/TuneSpace.png" alt="TuneSpace" />
-                                <span class="card-title"><span class="new badge pulse"></span> TuneSpace</span>
+                                <span class="card-title">TuneSpace</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
                                     href="https://mjamesd.github.io/crispy-happiness/" target="_blank"><i
                                         class="material-icons">preview</i></a>
@@ -125,32 +155,9 @@
                             </aside>
                         </div>
                     </section>
-                    <section class="col s12 m5" data-label="weather-dashboard">
-                        <div class="card hoverable">
-                            <header class="card-image">
-                                <img src="./assets/img/weather-dashboard.png" />
-                                <span class="card-title"><span class="new badge pulse"></span> Weather Dashboard</span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
-                                    href="https://mjamesd.github.io/weather-dashboard/" target="_blank"><i
-                                        class="material-icons">preview</i></a>
-                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
-                                    href="https://github.com/mjamesd/weather-dashboard" target="_blank"><i
-                                        class="material-icons">integration_instructions</i></a>
-                            </header>
-                            <article class="card-content">
-                                <p>
-                                    An API-driven jQuery and Bootstrap webapp to check the weather. The user's searches
-                                    are saved and can be recalled at the click of a button.
-                                </p>
-                            </article>
-                            <aside class="card-action">
-                                Developed individually as coursework.
-                            </aside>
-                        </div>
-                    </section>
                 </div>
                 <!-- SECOND ROW -->
-                <div class="row" data-label="project-row-1">
+                <div class="row" data-label="project-row-2">
                     <section class="col s12 m4 l4" data-label="seattle-vteu">
                         <div class="card hoverable">
                             <header class="card-image">
@@ -197,23 +204,55 @@
                     </section>
                 </div>
                 <!-- THIRD ROW -->
-                <div class="row" data-label="project-row-1">
-                    <section class="col s12 m4 l4" data-label="workday-scheduler">
+                <div class="row" data-label="project-row-3">
+                    <section class="col s12 m4 l4" data-label="melody-medley">
                         <div class="card hoverable">
                             <header class="card-image">
-                                <img src="./assets/img/workday-scheduler.png" />
-                                <span class="card-title flow-text">Workday Scheduler</span>
+                                <img src="./assets/img/melody-medley.png" />
+                                <span class="card-title"><span class="new badge pulse"></span> Melody Medley</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
-                                    href="https://mjamesd.github.io/workday-scheduler/" target="_blank"><i
+                                    href="https://github.com/jcnolan9/Project2_FullStackApp" target="_blank"><i
                                         class="material-icons">preview</i></a>
                                 <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
-                                    href="https://github.com/mjamesd/workday-scheduler" target="_blank"><i
+                                    href="https://project2-full-stack-app.herokuapp.com/" target="_blank"><i
                                         class="material-icons">integration_instructions</i></a>
                             </header>
                             <article class="card-content">
                                 <p>
-                                    A productivity tool for busy professionals. Saves the user's productivity notes
-                                    across browsing sessions using jQuery and Moment.js.
+                                    An MVC content management system for a playlist creator written in Express. It
+                                    utilizes asynchronous JavaScript functions and performs CRUD functions
+                                    (Create, Read, Update, and Delete) on playlists. Users can register a new account,
+                                    create playlists, and view all songs, artists, genres, and other users' playlists.
+                                    The app uses the MySQL2, Express, dotenv, and Sequelize Node.js packages.
+                                </p>
+                            </article>
+                            <aside class="card-action">
+                                Developed in a team setting as coursework.
+                            </aside>
+                        </div>
+                    </section>
+                    <section class="col s12 m4 l4" data-label="go-team-go">
+                        <div class="card hoverable">
+                            <header class="card-image">
+                                <img src="./assets/img/go-team-go.png" />
+                                <span class="card-title flow-text"><span class="new badge pulse"></span> Go, Team,
+                                    Go!</span>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
+                                    href="https://watch.screencastify.com/v/GCro8fYiQrT7bSnuYFLt" target="_blank"><i
+                                        class="material-icons">ondemand_video</i></a>
+                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
+                                    href="https://github.com/mjamesd/go-team-go" target="_blank"><i
+                                        class="material-icons">integration_instructions</i></a>
+                            </header>
+                            <article class="card-content">
+                                <p>
+                                    I built a Node.js command-line application that takes in information about employees
+                                    on a software engineering team, then generates an HTML webpage that displays
+                                    summaries for each person.
+                                </p>
+                                <p>
+                                    Demostration of command line interaction, Materialize CSS, and testing using the
+                                    Jest Node.JS package.
                                 </p>
                             </article>
                             <aside class="card-action">
@@ -221,55 +260,22 @@
                             </aside>
                         </div>
                     </section>
-                    <section class="col s12 m4 l4" data-label="timed-quiz">
+                    <section class="col s12 m4 l4" data-label="weather-dashboard">
                         <div class="card hoverable">
                             <header class="card-image">
-                                <img src="./assets/img/timed-quiz.png" />
-                                <span class="card-title flow-text"><span class="new badge pulse"></span> So You Think
-                                    You Can Code?</span>
+                                <img src="./assets/img/weather-dashboard.png" />
+                                <span class="card-title flow-text">Weather Dashboard</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
-                                    href="https://mjamesd.github.io/timed-quiz/index.html" target="_blank"><i
+                                    href="https://mjamesd.github.io/weather-dashboard/" target="_blank"><i
                                         class="material-icons">preview</i></a>
                                 <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
-                                    href="https://github.com/mjamesd/timed-quiz" target="_blank"><i
+                                    href="https://github.com/mjamesd/weather-dashboard" target="_blank"><i
                                         class="material-icons">integration_instructions</i></a>
                             </header>
                             <article class="card-content">
                                 <p>
-                                    Play America's <em>favorite</em> new gameshow! Answer the questions in the time
-                                    available -- but watch out if you get one wrong, because you'll lose 10 seconds on
-                                    the clock! Champions can enter their initials into their own Hall of Fame.
-                                </p>
-                                <p>
-                                    Demostration of time intervals, browser storage, and responsive design using
-                                    Javascript and CSS.
-                                </p>
-                            </article>
-                            <aside class="card-action">
-                                Developed individually as coursework.
-                            </aside>
-                        </div>
-                    </section>
-                    <section class="col s12 m4 l4" data-label="password-generator">
-                        <div class="card hoverable">
-                            <header class="card-image">
-                                <img src="./assets/img/password-generator.png" />
-                                <span class="card-title flow-text">Password Generator</span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
-                                    href="https://mjamesd.github.io/password-generator/" target="_blank"><i
-                                        class="material-icons">preview</i></a>
-                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab"
-                                    href="https://github.com/mjamesd/password-generator" target="_blank"><i
-                                        class="material-icons">integration_instructions</i></a>
-                            </header>
-                            <article class="card-content">
-                                <p>
-                                    Generate a secure password by following a few prompts. Asks the user some questions
-                                    and outputs a randomized password string. The user can click it or the button to
-                                    copy.
-                                </p>
-                                <p>
-                                    Demonstration of JavaScript and responsive design with CSS.
+                                    An API-driven jQuery and Bootstrap webapp to check the weather. The user's searches
+                                    are saved and can be recalled at the click of a button.
                                 </p>
                             </article>
                             <aside class="card-action">
@@ -313,13 +319,26 @@
     </main>
 
     <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col grey-text text-lighten-4 s6 m6 l4 right">
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-4 right" href="https://pngtree.com/free-backgrounds"
+                                target="_blank">background images from pngtree.com</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-4 right" href="https://fontawesome.com/license"
+                                target="_blank">brand
+                                icon images from fontawesome.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="footer-copyright">
-            <div class="container">
-                © 2021 DrumDev
-                <a class="grey-text text-lighten-4 right" href="https://pngtree.com/free-backgrounds"
-                    target="_blank">background images from pngtree.com</a><br />
-                <a class="grey-text text-lighten-4 right" href="https://fontawesome.com/license" target="_blank">brand
-                    icon images from fontawesome.com</a>
+            <div class="container center">
+                <p>© 2021 DrumDev</p>
             </div>
         </div>
     </footer>
