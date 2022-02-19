@@ -1,0 +1,128 @@
+[
+    {
+        "_id": 0,
+        "title": "Pressed Words",
+        "fab1": {
+            "type": "preview",
+            "disabled": false,
+            "url": "https://jubilant-robot-206.herokuapp.com/"
+        },
+        "fab2": {
+            "type": "code",
+            "disabled": false,
+            "url": "https://github.com/mjamesd/jubilant-robot"
+        },
+        "img": "/img/pressed-words.png",
+        "desc1": "A blog app with an MVC content management system using Express as the back end, Handlebars as the front end, and MySQL as the database. It utilizes asynchronous JavaScript functions and performs CRUD functions (Create, Read, Update, and Delete) on users, posts, and comments.",
+        "desc2": "The app uses the MySQL2, Express, Express-Handlebars, Express-Session, dotenv, and Sequelize Node.js packages.",
+        "info": "Developed individually as coursework"
+    },
+    {
+        "_id": 1,
+        "title": "TuneSpace",
+        "fab1": {
+            "type": "preview",
+            "disabled": false,
+            "url": "https://mjamesd.github.io/crispy-happiness/"
+        },
+        "fab2": {
+            "type": "code",
+            "disabled": false,
+            "url": "https://github.com/mjamesd/crispy-happiness"
+        },
+        "img": "/img/TuneSpace.png",
+        "desc1": "A mobile-responsive, API-driven, jQuery and Materialize website that provides biographies, discographies, and lyrics for musicians of all genres. By pulling data from various databases we created a centralized hub where users can explore their favorite artists and discover new music.",
+        "desc2": "The app uses the vanilla JavaScript, jQuery, Materialize CSS and JS, and three external APIs.",
+        "info": "Developed in a team setting as coursework"
+    },
+    {
+        "_id": 2,
+        "title": "Seattle VTEU",
+        "fab1": {
+            "type": "preview",
+            "disabled": false,
+            "url": "https://uwvteu.org/"
+        },
+        "fab2": {
+            "type": "code",
+            "disabled": true,
+            "url": null
+        },
+        "img": "/img/vteu.png",
+        "desc1": "A WordPress website for a COVID-19 vaccine clinical trial center in Seattle, Wa.",
+        "desc2": "The app uses WordPress and MySQL. It is hosted by the University of Washington.",
+        "info": "Proprietary code unavailable"
+    },
+    {
+        "_id": 3,
+        "title": "UW Virology Research Clinic",
+        "fab1": {
+            "type": "preview",
+            "disabled": false,
+            "url": "https://depts.washington.edu/vrc"
+        },
+        "fab2": {
+            "type": "code",
+            "disabled": true,
+            "url": null
+        },
+        "img": "/img/vrc.png",
+        "desc1": "A full stack content management system and public-facing website for an infectious disease research clinic in Seattle, Wa.",
+        "desc2": "The app uses custom PHP, the CakePHP MVC framework, CSS, JavaScript, and MySQL. It is hosted by the University of Washington.",
+        "info": "Developed individually. Proprietary code unavailable"
+    },
+    {
+        "_id": 4,
+        "title": "Melody Medley",
+        "fab1": {
+            "type": "preview",
+            "disabled": false,
+            "url": "https://project2-full-stack-app.herokuapp.com/"
+        },
+        "fab2": {
+            "type": "code",
+            "disabled": false,
+            "url": "https://github.com/jcnolan9/Project2_FullStackApp"
+        },
+        "img": "/img/melody-medley.png",
+        "desc1": "An MVC content management system for a playlist creator written in Express. It utilizes asynchronous JavaScript functions to perform CRUD functions (Create, Read, Update, and Delete) on playlists. Users can register a new account, create playlists, and view all songs, artists, genres, and other users' playlists.",
+        "desc2": "The app uses the MySQL2, Express, dotenv, and Sequelize Node.js packages.",
+        "info": "Developed in a team setting as coursework"
+    },
+    {
+        "_id": 5,
+        "title": "Go, Team, Go!",
+        "fab1": {
+            "type": "video",
+            "disabled": false,
+            "url": "https://watch.screencastify.com/v/GCro8fYiQrT7bSnuYFLt"
+        },
+        "fab2": {
+            "type": "code",
+            "disabled": false,
+            "url": "https://github.com/mjamesd/go-team-go"
+        },
+        "img": "/img/go-team-go.png",
+        "desc1": "A Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.",
+        "desc2": "Demostration of command line interaction, Materialize CSS, and testing using the Jest Node.Js package.",
+        "info": "Developed individually as coursework"
+    },
+    {
+        "_id": 6,
+        "title": "Weather Dashboard",
+        "fab1": {
+            "type": "preview",
+            "disabled": false,
+            "url": "https://mjamesd.github.io/weather-dashboard/"
+        },
+        "fab2": {
+            "type": "code",
+            "disabled": false,
+            "url": "https://github.com/mjamesd/weather-dashboard"
+        },
+        "img": "/img/weather-dashboard.png",
+        "desc1": "An API-driven jQuery and Bootstrap webapp to check the weather. The user's searches are saved and can be recalled at the click of a button.",
+        "desc2": "The app uses Bootstrap, jQuery, Moment JS, FontAwesome & Google Fonts, and the external OpenWeather API.",
+        "info": "Developed individually as coursework"
+    }
+]

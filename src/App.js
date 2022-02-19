@@ -1,25 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { AnimatePresence, motion } from "framer-motion";
+import Grid from '@mui/material/Grid';
+import "@fontsource/permanent-marker";
+import "@fontsource/special-elite";
+import "@fontsource/roboto";
+import Header from './components/Header';
+import Footer from './components/Footer';
+import About from './pages/About';
+import Portfolio from './pages/Portfolio';
+import Contact from './pages/Contact';
+import Resume from './pages/Resume';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const wholeAnimation = {
+    animate: {
+        transition: { staggerChildren: 0.25 },
+    },
+};
+
+const contentAnimation = {
+    initial: { x: -200, opacity: 0 },
+    animate: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.7,
+            ease: [0.6, -0.05, 0.01, 0.99],
+        },
+    },
+};
+
+const App = () => {
+
+    useEffect(() => {
+        document.title = 'Mark Drummond | Portfolio | Full-Stack Web Developer';
+    }, []);
+
+    return (
+        <Grid container direction='column' style={{backgroundImage: `url('/img/green-gradient-clouds.jpg'), url('/img/orange-and-green.jpg')`}}>
+            <Grid item>
+                <Header />
+            </Grid>
+            <Grid item container>
+                <Grid item xs={false} sm={2} />
+                <Grid item xs={12} sm={8}>
+                    <AnimatePresence exitBeforeEnter>
+                        <motion.section exit={{ opacity: 0 }}>
+                            <motion.div
+                                variants={wholeAnimation}
+                                animate="animate"
+                                initial="initial"
+                            >
+                                <Routes>
+                                    <Route exact path="/" element={<About contentAnimation={contentAnimation} />} />
+                                    <Route exact path="/about" element={<About contentAnimation={contentAnimation} />} />
+                                    <Route exact path="/portfolio" element={<Portfolio contentAnimation={contentAnimation} />} />
+                                    <Route exact path="/contact" element={<Contact contentAnimation={contentAnimation} />} />
+                                    <Route exact path="/resume" element={<Resume contentAnimation={contentAnimation} />} />
+                                </Routes>
+                            </motion.div>
+                        </motion.section>
+                    </AnimatePresence>
+                </Grid>
+                <Grid item xs={false} sm={2} />
+            </Grid>
+            <Grid item>
+                <Footer />
+            </Grid>
+        </Grid>
+    );
+};
 
 export default App;
