@@ -32,15 +32,21 @@ const contentAnimation = {
 };
 
 const App = () => {
+    const [activePage, setActivePage] = useState('About');
+    
+    const handlePageChange = (page) => {
+        console.log('changed active page to: ', page);
+        setActivePage(page)
+    };
 
     useEffect(() => {
         document.title = 'Mark Drummond | Portfolio | Full-Stack Web Developer';
     }, []);
 
     return (
-        <Grid container direction='column' style={{backgroundImage: `url('/img/green-gradient-clouds.jpg'), url('/img/orange-and-green.jpg')`}}>
+        <Grid container direction='column'>
             <Grid item>
-                <Header />
+                <Header activePage={activePage} handlePageChange={handlePageChange} />
             </Grid>
             <Grid item container>
                 <Grid item xs={false} sm={2} />
@@ -65,7 +71,7 @@ const App = () => {
                 </Grid>
                 <Grid item xs={false} sm={2} />
             </Grid>
-            <Grid item>
+            <Grid item style={ { backgroundColor: '#724472' } }>
                 <Footer />
             </Grid>
         </Grid>
