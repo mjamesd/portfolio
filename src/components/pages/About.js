@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function About({ currentPage, handlePageChange }) {
+const About = ({ currentPage, handlePageChange }) => {
     return (
         <section className="about" data-label="about">
             <h1>Web Developer for Hire</h1>
@@ -21,3 +21,5 @@ export default function About({ currentPage, handlePageChange }) {
         </section>
     );
 }
+
+export default About

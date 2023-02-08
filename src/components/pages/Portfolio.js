@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Portfolio({ currentPage, handlePageChange }) {
+const Portfolio = ({ currentPage, handlePageChange }) => {
     return (
         <section id="projects" class="row">
             <header class="col s12">
@@ -96,13 +96,13 @@ export default function Portfolio({ currentPage, handlePageChange }) {
                     <section class="col s12 m8 l8" data-label="uw-vrc">
                         <div class="card hoverable">
                             <header class="card-image">
-                                <img src="./assets/img/vrc.png" />
+                                <img src="./assets/img/vrc.png" alt="UW Virology Research Clinic"/>
                                 <span class="card-title flow-text">UW Virology Research Clinic</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
                                     href="http://depts.washington.edu/vrc" target="_blank" rel="noreferrer"><i
                                         class="material-icons">preview</i></a>
-                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab disabled"
-                                    target="_blank" rel="noreferrer"><i class="material-icons">integration_instructions</i></a>
+                                <button class="btn-floating halfway-fab waves-effect waves-light my-fab disabled"
+                                    target="_blank" rel="noreferrer"><i class="material-icons">integration_instructions</i></button>
                             </header>
                             <article class="card-content">
                                 <p>
@@ -122,12 +122,12 @@ export default function Portfolio({ currentPage, handlePageChange }) {
                     <section class="col s12 m4 l4" data-label="seattle-vteu">
                         <div class="card hoverable">
                             <header class="card-image">
-                                <img src="./assets/img/vteu.png" />
+                                <img src="./assets/img/vteu.png" alt="Seattle VTEU" />
                                 <span class="card-title flow-text">Seattle VTEU</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
                                     href="http://uwvteu.org/" target="_blank" rel="noreferrer"><i class="material-icons">preview</i></a>
-                                <a class="btn-floating halfway-fab waves-effect waves-light my-fab disabled"
-                                    target="_blank" rel="noreferrer"><i class="material-icons">integration_instructions</i></a>
+                                <button class="btn-floating halfway-fab waves-effect waves-light my-fab disabled"
+                                    target="_blank" rel="noreferrer"><i class="material-icons">integration_instructions</i></button>
                             </header>
                             <article class="card-content">
                                 <p>
@@ -143,7 +143,7 @@ export default function Portfolio({ currentPage, handlePageChange }) {
                     <section class="col s12 m4 l4" data-label="go-team-go">
                         <div class="card hoverable">
                             <header class="card-image">
-                                <img src="./assets/img/go-team-go.png" />
+                                <img src="./assets/img/go-team-go.png" alt="Go, Team, Go!" />
                                 <span class="card-title flow-text">Go, Team, Go!</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
                                     href="https://watch.screencastify.com/v/GCro8fYiQrT7bSnuYFLt" target="_blank" rel="noreferrer"><i
@@ -171,7 +171,7 @@ export default function Portfolio({ currentPage, handlePageChange }) {
                     <section class="col s12 m4 l4" data-label="weather-dashboard">
                         <div class="card hoverable">
                             <header class="card-image">
-                                <img src="./assets/img/weather-dashboard.png" />
+                                <img src="./assets/img/weather-dashboard.png" alt="Weather Dashboard" />
                                 <span class="card-title flow-text">Weather Dashboard</span>
                                 <a class="btn-floating halfway-fab waves-effect waves-light my-fab preview-fab-btn"
                                     href="https://mjamesd.github.io/weather-dashboard/" target="_blank" rel="noreferrer"><i
@@ -196,3 +196,5 @@ export default function Portfolio({ currentPage, handlePageChange }) {
         </section>
     );
 }
+
+export default Portfolio

@@ -1,18 +1,24 @@
 import React from 'react';
+import styled from 'styled-components';
 
-export default function Home({ currentPage, handlePageChange }) {
+const ProficiencyCard = styled.aside`
+
+`;
+
+const HomeCard = styled.section`
+`;
+
+const Home = ({ currentPage, handlePageChange }) => {
     return (
         <section className="home">
-            <div className="card-panel site-purple hoverable">
+            <ProficiencyCard>
                 <h4 className="white-text">Full Stack Web Developer</h4>
                 <span className="white-text">HTML5, accessible web, CSS3, Bootstrap, Materialize JS & CSS,
                     JavaScript, jQuery, Node.js, Express, React, React Material UI library, Mongoose,
                     GraphQL, PHP, MySQL, MongoDB, WordPress, Git, & Heroku</span>
-            </div>
-            <div className="card-content">
-                <div className="card-image">
-                    <img className="profile-pic" src="./assets/markdrummond_250.jpg" alt="Mark J Drummond" />
-                </div>
+            </ProficiencyCard>
+            <HomeCard>
+                <img className="profile-pic" src="./assets/markdrummond_250.jpg" alt="Mark J Drummond" />
                 <p>
                     I'm a thirty-something new dad from Kansas City, now living in Seattle and
                     following my passion as a full stack web developer. I have independent,
@@ -23,7 +29,9 @@ export default function Home({ currentPage, handlePageChange }) {
                     create a meaningful product that meets your customers' needs, as well as your
                     own. Contact me today to discuss your next website!
                 </p>
-            </div>
+            </HomeCard>
         </section>
     );
 }
+
+export default Home

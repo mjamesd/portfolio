@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Contact({ currentPage, handlePageChange }) {
+const Contact = ({ currentPage, handlePageChange }) => {
     return (
         <section className="contact">
             <h2>Contact Me</h2>
@@ -21,3 +21,5 @@ export default function Contact({ currentPage, handlePageChange }) {
         </section>
     );
 }
+
+export default Contact
