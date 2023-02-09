@@ -190,6 +190,10 @@ span.badge.darkgold:hover {
     margin: 5px;
 }
 
+.card .card-image {
+    align-self: center;
+}
+
 .card .card-image img {
     padding: 5px !important; /* override Materialize default */
     border-radius: 15px !important; /* give the  */
