@@ -46,9 +46,16 @@ const App = () => {
     };
 
     const handlePageChange = (page) => {
-        setCurrentPage(page);
+        // Fade content out and back in
+        document.getElementById('contentContainer').style.opacity = '0';
+        // Scroll to top of page
         const top = document.getElementById('top');
         top.scrollIntoView();
+        // Set the page via React useState()
+        window.setTimeout(function () {
+            setCurrentPage(page);
+            document.getElementById('contentContainer').style.opacity = '1';
+        }, 400)
     }
 
     const handleCloseMobileNavOverlay = () => {
@@ -57,9 +64,9 @@ const App = () => {
         document.getElementById('brand').style.transform = 'translateX(0%)';
         document.getElementById('mobileNavOverlay').style.opacity = '0';
         // We need to give the browser time to complete the transition, which is 350ms -- we give it 355ms before changing display to 'none'
-        window.setTimeout(function() {
+        window.setTimeout(function () {
             document.getElementById('mobileNavOverlay').style.display = 'none';
-          }, 355)
+        }, 355)
         document.body.style.overflow = '';
     };
 
@@ -69,7 +76,7 @@ const App = () => {
             <Header currentPage={currentPage} handlePageChange={handlePageChange} />
             <ContentContainer renderPage={renderPage} />
             <Footer />
-            <MobileNavOverlay id="mobileNavOverlay" style={{display: 'none', opacity: '0'}} onClick={handleCloseMobileNavOverlay} />
+            <MobileNavOverlay id="mobileNavOverlay" style={{ display: 'none', opacity: '0' }} onClick={handleCloseMobileNavOverlay} />
         </AppContainer>
     );
 };

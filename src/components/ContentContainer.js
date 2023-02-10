@@ -7,6 +7,7 @@ const StyledMain = styled.main`
     width: var(--body-vw);
     margin-inline: auto;
     padding-inline: 1rem;
+    transition: opacity 250ms ease-in-out;
 `;
 
 
