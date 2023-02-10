@@ -1,42 +1,59 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavButton } from './styles/Buttons';
 
 const NavList = styled.nav`
-    align-self: center;
+    display: none;
+    @media (min-width: 774px) {
+        display: flex;
+        height: 100%;
+    }
 `;
 
-const NavButton = styled.button`
-    background: ${props => props.active ? "#000" : "#fff"};
-    color: ${props => props.active ? "#fff" : "#000"};
+const StyledI = styled.i`
+    padding-block-end: 3px;
+    padding-inline-end: 10px;
+    color: ${props => props.active ? "var(--light2)" : "rgba(255,255,255,0.8)"};
 `;
 
-const NavBar = ({ currentPage, handlePageChange }) => {
+const NavBar = (props) => {
     return (
         <NavList>
             <NavButton
                 key='home'
-                active={currentPage === 'Home' ? true : false}
-                onClick={() => handlePageChange('Home')}
-                onMouseOver={() => this.classList}
-            >Home
+                active={props.currentPage === 'Home' ? true : false}
+                onClick={() => props.handlePageChange('Home')}
+            ><StyledI
+                className="material-icons left"
+                active={props.currentPage === 'Home' ? true : false}
+                >home</StyledI>Home
             </NavButton>
             <NavButton
                 key='about'
-                active={currentPage === 'About' ? true : false}
-                onClick={() => handlePageChange('About')}
-            >About
+                active={props.currentPage === 'About' ? true : false}
+                onClick={() => props.handlePageChange('About')}
+            ><StyledI
+                className="material-icons left"
+                active={props.currentPage === 'About' ? true : false}
+                >account_circle</StyledI>About
             </NavButton>
             <NavButton
                 key='portfolio'
-                active={currentPage === 'Portfolio' ? true : false}
-                onClick={() => handlePageChange('Portfolio')}
-            >Portfolio
+                active={props.currentPage === 'Portfolio' ? true : false}
+                onClick={() => props.handlePageChange('Portfolio')}
+            ><StyledI
+                className="material-icons left"
+                active={props.currentPage === 'Portfolio' ? true : false}
+                >web</StyledI>Portfolio
             </NavButton>
             <NavButton
                 key='contact'
-                active={currentPage === 'Contact' ? true : false}
-                onClick={() => handlePageChange('Contact')}
-            >Contact
+                active={props.currentPage === 'Contact' ? true : false}
+                onClick={() => props.handlePageChange('Contact')}
+            ><StyledI
+                className="material-icons left"
+                active={props.currentPage === 'Contact' ? true : false}
+                >phonelink_ring</StyledI>Contact
             </NavButton>
         </NavList>
     );

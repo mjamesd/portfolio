@@ -1,6 +1,7 @@
 import React from 'react';
+import {LinkStyleButton} from '../styles/Buttons';
 
-const About = ({ currentPage, handlePageChange }) => {
+const About = (props) => {
     return (
         <section className="about" data-label="about">
             <h1>Web Developer for Hire</h1>
@@ -12,11 +13,10 @@ const About = ({ currentPage, handlePageChange }) => {
 
             <p>I am seeking employment as a web developer – front end, back end, or full stack. Contact me today to discuss your next website!</p>
 
-            <p>I have been passionate about web development since I was a teenager. I began teaching myself to code when I was 15 and was proficient in C, Bash, HTML, CSS, PHP & MySQL by the time I graduated high school. In college, I took on a few small clients and worked as a web developer at two small businesses. When I moved to Seattle, I established a career in and passion for public health but always missed the creativity and problem solving of web development. As soon as I had the resources, I pursued a certificate in full stack web development through the University of Washington. Now that I’ve earned the certificate, I am excited to pursue this career again. I am seeking employment as a front end, back end, or full stack web developer and look forward to working with you. Please view my <a
-                href="#portfolio"
-                onClick={() => handlePageChange('Portfolio')}
-                className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
-            >portfolio</a> (last updated December 2022) for examples of my past and current projects. I look forward to working with you!
+            <p>I have been passionate about web development since I was a teenager. I began teaching myself to code when I was 15 and was proficient in C, Bash, HTML, CSS, PHP & MySQL by the time I graduated high school. In college, I took on a few small clients and worked as a web developer at two small businesses. When I moved to Seattle, I established a career in and passion for public health but always missed the creativity and problem solving of web development. As soon as I had the resources, I pursued a certificate in full stack web development through the University of Washington. Now that I’ve earned the certificate, I am excited to pursue this career again. I am seeking employment as a front end, back end, or full stack web developer and look forward to working with you. Please view my <LinkStyleButton
+                key='portfolio'
+                onClick={() => props.handlePageChange('Portfolio')}
+            >portfolio</LinkStyleButton> (last updated December 2022) for examples of my past and current projects. I look forward to working with you!
             </p>
         </section>
     );

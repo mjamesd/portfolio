@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Permanent+Marker&family=Special+Elite&family=Norican&family=Material+Icons&display=swap');
+
+:root {
+    --body-bg-color: unset;
+    --body-font-color: #091814;
+    --purple-bg-color: #724472;
+    --purple-highlight-color: #621d62;
+    --std-border: #163a16;
+    --hover-border: #1e7f20;
+    --def-link-color: #ad9612;
+    --darkgold: #b8860b;
+    --light1: #afca2f;
+    --light2: #609e15;
+    --body-vw: 75vw;
+    --scrollbar-width: 5px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-bg-color);
+    background-image: url(../public/assets/green-gradient-clouds.jpg), url(../public/assets/orange-and-green.jpg);
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-size: var(--body-vw), cover;
+    background-position: center;
+    scrollbar-width: var(--scrollbar-width);
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+  }
+
+@media screen and (max-width: 774px) {
+    body {
+        background-size: 90vw, cover;
+    }
+
+    #contentContainer {
+        width: 90vw;
+    }
+}
+@media screen and (max-width: 576px) {
+    body {
+        background-size: cover;
+    }
 }
