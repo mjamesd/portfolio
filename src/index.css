@@ -28,11 +28,19 @@ body {
     background-position: center;
     scrollbar-width: var(--scrollbar-width);
     -ms-overflow-style: none;
+    font-family: 'Special Elite', cursive;
 }
 
 body::-webkit-scrollbar {
     width: var(--scrollbar-width);
-  }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    inset: 0;
+    border: 0;
+}
 
 @media screen and (max-width: 774px) {
     body {

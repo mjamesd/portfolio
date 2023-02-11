@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledMain = styled.main`
     position: relative;
     top: 9px;
-    width: var(--body-vw);
+    width: calc(var(--body-vw) - 40px);
     margin-inline: auto;
     padding-inline: 1rem;
     transition: opacity 250ms ease-in-out;

@@ -25,7 +25,6 @@ const NavButton = styled(Button)`
     padding-block: 0;
     background-color: ${props => props.active ? "var(--purple-highlight-color)" : 'unset'};
     color: rgba(255,255,255,0.8);
-    font-family: 'Special Elite', cursive;
     cursor: pointer;
     &:hover{
         background-color: ${props => props.active ? "var(--purple-highlight-color)" : 'rgba(0,0,0,0.1)'};
