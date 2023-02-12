@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './NavBar';
 import MobileNavBar from './MobileNavBar';
 import styled from 'styled-components';
+import { LinkStyleButton } from './Styles';
 
 const StyledHeaderWrapper = styled.header`
     display: block;
@@ -17,12 +18,16 @@ const StyledHeader = styled.div`
     position: fixed;
     width: 96vw;
     height: 64px;
-    background-color: var(--purple-bg-color) !important;
+    background-color: var(--purple-light);
     color: #fff;
     padding-inline: 2vw;
-    @media (min-width: 774px) {
+    @media (min-width: 825px) {
         justify-content: space-between;
     }
+`;
+
+const HeaderLinkStyleButton = styled(LinkStyleButton)`
+    cursor: default;
 `;
 
 const Brand = styled.section`
@@ -67,10 +72,15 @@ const Header = (props) => {
         <StyledHeaderWrapper>
             <StyledHeader>
                 <MobileNavBar currentPage={props.currentPage} handlePageChange={props.handlePageChange} />
-                <Brand id="brand">
-                    <HeaderImage src="./assets/logo192.png" alt="Mark Drummond" />
-                    <HeaderText>Mark Drummond</HeaderText>
-                </Brand>
+                <HeaderLinkStyleButton
+                    key="home"
+                    onClick={() => props.handlePageChange('Home')}
+                >
+                    <Brand id="brand">
+                        <HeaderImage src="./assets/logo192.png" alt="Mark Drummond" />
+                        <HeaderText>Mark&nbsp;Drummond</HeaderText>
+                    </Brand>
+                </HeaderLinkStyleButton>
                 <NavBar currentPage={props.currentPage} handlePageChange={props.handlePageChange} />
             </StyledHeader>
         </StyledHeaderWrapper>

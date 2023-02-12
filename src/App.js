@@ -11,8 +11,8 @@ import Contact from './components/pages/Contact';
 
 const AppContainer = styled.div`
     display: grid;
-    grid-template-rows: 64px 1fr 28px;
-    height: 100vh;
+    grid-template-rows: 64px auto 28px;
+    min-height: 95vh;
 `;
 
 const MobileNavOverlay = styled.div`
@@ -46,6 +46,7 @@ const App = () => {
     };
 
     const handlePageChange = (page) => {
+        if (page === currentPage) return;
         // Fade content out and back in
         document.getElementById('contentContainer').style.opacity = '0';
         // Scroll to top of page

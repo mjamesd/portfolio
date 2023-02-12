@@ -1,5 +1,5 @@
 import React from 'react';
-import { LinkStyleButton } from './styles/Buttons';
+import { LinkStyleButton } from './Styles';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
@@ -8,14 +8,22 @@ const StyledFooter = styled.footer`
     justify-content: center;
     align-items: center;
 	height: 64px;
-    background-color: var(--purple-bg-color);
-    color: rgba(255,255,255,0.8);
+    background-color: var(--purple-light);
+    color: var(--white);
     font-family: 'Special Elite', cursive;
 `;
 
 const StyledFooterLinkStyleButton = styled(LinkStyleButton)`
-	background: rgba(255,255,255,0.2);
+	background: var(--green-light);
+    border-radius: 25px;
+    padding: 5px 10px;
+    margin-block-end: 5px;
+    font-size: 0.75rem;
 	z-index: 999;
+    &:hover {
+        background: var(--green-dark);
+    }
+    transition: background var(--transition-time-slow) ease-out;
 `;
 
 const StyledP = styled.p`

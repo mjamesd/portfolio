@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavButton } from './styles/Buttons';
+import { NavButton } from './Styles';
 
 const NavList = styled.nav`
     display: none;
-    @media (min-width: 774px) {
+    @media (min-width: 825px) {
         display: flex;
         height: 100%;
     }
