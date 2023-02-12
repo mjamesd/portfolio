@@ -19,6 +19,7 @@ const LinkStyleButton = styled(Button)`
 
 const NavButton = styled(Button)`
     display: flex;
+    width: 100%;
     align-items: center;
     padding: 0 0.75rem;
     border: none;

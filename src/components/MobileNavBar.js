@@ -50,7 +50,7 @@ const MobileNavBar = (props) => {
               }, 50)
             mobileNavList.style.opacity = '1';
             mobileNavList.style.transform = 'translateX(0%)';
-            brandEl.style.transform = 'translateX(35%)';
+            brandEl.style.transform = 'translateX(30%)';
             document.body.style.overflow = 'hidden';
         } else {
             mobileNavList.style.transform = 'translateX(-110%)';
