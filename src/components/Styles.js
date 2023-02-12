@@ -5,15 +5,15 @@ const Button = styled.button`
 `;
 
 const LinkStyleButton = styled(Button)`
-    transition: all var(--transition-time-fast) ease-in-out;
+    transition: color var(--transition-time-fast) ease-in-out;
     border: none;
     background: none;
-    color: var(--purple-highlight-color);
-    border-bottom: 1px solid var(--light2);
+    color: var(--purple-dark);
+    border-bottom: 1px solid var(--green-light);
     padding: 0;
     cursor: pointer;
     &:hover {
-        color: var(--light2);
+        color: var(--green-light);
     }
 `;
 
@@ -33,7 +33,7 @@ const NavButton = styled(Button)`
 `;
 
 const StyledImg = styled.img`
-	border-radius: 15%;
+	border-radius: var(--border-radius-original);
 `;
 
 const StyledCard = styled.section`
