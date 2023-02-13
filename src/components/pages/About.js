@@ -1,5 +1,5 @@
 import React from 'react';
-import {LinkStyleButton} from '../Styles';
+import {LinkStyleButton} from '../../Styles';
 
 const About = (props) => {
     return (

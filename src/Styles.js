@@ -24,7 +24,7 @@ const NavButton = styled(Button)`
     padding: 0 0.75rem;
     border: none;
     background-color: ${props => props.active ? "var(--purple-dark)" : 'unset'};
-    color: ${ props => props.active ? "var(--white)" : "var(--black)" };
+    color: ${ props => props.active ? "var(--white-flat)" : "var(--white)" };
     cursor: pointer;
     transition: background-color var(--transition-time-fast) ease-in-out;
     &:hover{

@@ -32,7 +32,7 @@ const App = () => {
     const [currentPage, setCurrentPage] = useState('Home');
 
     const renderPage = () => {
-        // pass currentPage and handlePageChange to each page so their links can change the page
+        // pass currentPage and handlePageChange to each page so their button links can change the page, too
         switch (currentPage) {
             case 'About':
                 return <About currentPage={currentPage} handlePageChange={handlePageChange} />;
@@ -47,6 +47,8 @@ const App = () => {
 
     const handlePageChange = (page) => {
         if (page === currentPage) return;
+        let transitionTime = getComputedStyle(document.documentElement).getPropertyValue('--transition-time-int');
+        let transitionTimeInt = parseInt(transitionTime.substring(0, transitionTime.length - 2));
         // Fade content out and back in
         document.getElementById('contentContainer').style.opacity = '0';
         // Scroll to top of page
@@ -56,7 +58,7 @@ const App = () => {
         window.setTimeout(function () {
             setCurrentPage(page);
             document.getElementById('contentContainer').style.opacity = '1';
-        }, 400)
+        }, transitionTimeInt + 5)
     }
 
     const handleCloseMobileNavOverlay = () => {
@@ -64,10 +66,12 @@ const App = () => {
         document.getElementById('mobileNavList').style.transform = 'translateX(-110%)';
         document.getElementById('brand').style.transform = 'translateX(0%)';
         document.getElementById('mobileNavOverlay').style.opacity = '0';
+        let transitionTime = getComputedStyle(document.documentElement).getPropertyValue('--transition-time-int');
+        let transitionTimeInt = parseInt(transitionTime.substring(0, transitionTime.length - 2));
         // We need to give the browser time to complete the transition, which is 350ms -- we give it 355ms before changing display to 'none'
         window.setTimeout(function () {
             document.getElementById('mobileNavOverlay').style.display = 'none';
-        }, 355)
+        }, transitionTimeInt + 5)
         document.body.style.overflow = '';
     };
 

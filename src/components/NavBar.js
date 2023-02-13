@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavButton } from './Styles';
+import { NavButton } from '../Styles';
 
 const NavList = styled.nav`
     display: none;
@@ -13,7 +13,7 @@ const NavList = styled.nav`
 const StyledI = styled.i`
     padding-block-end: 3px;
     padding-inline-end: 10px;
-    color: ${props => props.active ? "var(--light2)" : "rgba(255,255,255,0.8)"};
+    color: ${props => props.active ? "var(--green-light)" : "rgba(255,255,255,0.8)"};
 `;
 
 const NavBar = (props) => {

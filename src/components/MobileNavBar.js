@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { NavButton } from './Styles';
+import { NavButton } from '../Styles';
 
 const StyledMobileNavBar = styled.div`
     display: block;
+    z-index: 999;
     @media (min-width: 825px) {
         display: none;  
     }
-    z-index: 999;
 `;
 
 const StyledMobileNavList = styled.nav`
@@ -41,6 +41,7 @@ const MobileNavBar = (props) => {
         let mobileNavOverlay = document.getElementById('mobileNavOverlay');
         let brandEl = document.getElementById('brand');
         let transitionTime = getComputedStyle(document.documentElement).getPropertyValue('--transition-time-int');
+        let transitionTimeInt = parseInt(transitionTime.substring(0, transitionTime.length - 2));
         if (mobileNavList.style.transform === 'translateX(-110%)') {
             mobileMenuButton.style.transform = 'rotate(90deg) translateY(50%)';
             mobileNavOverlay.style.display = 'block';
@@ -60,7 +61,7 @@ const MobileNavBar = (props) => {
             // We need to give the browser time to complete the transition -- we give it transitionTime + 5 before changing display to 'none'
             window.setTimeout(function() {
                 mobileNavOverlay.style.display = 'none';
-            }, transitionTime + 5)
+            }, transitionTimeInt + 5)
             document.body.style.overflow = '';
         }
     }

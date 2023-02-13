@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledCard } from '../Styles';
+import { StyledCard } from '../../Styles';
 import styled from 'styled-components';
 
 const StyledHome = styled.section`
@@ -111,14 +111,14 @@ const Home = (props) => {
                                 <img
                                     src="./assets/markdrummond_250.jpg"
                                     alt="Mark J Drummond"
-                                    style={{ width: '250px', height: '250px;', borderRadius: 'var(--border-radius-original)' }}
+                                    style={{ width: '250px', height: '250px', borderRadius: 'var(--border-radius-original)' }}
                                 />
                             </StyledFlipCardSide>
                             <StyledFlipCardBackSide>
                                 <img
                                     src="./assets/mark-and-leon_250.jpg"
                                     alt="Mark J Drummond"
-                                    style={{ width: '250px', height: '250px;', borderRadius: 'var(--border-radius-original)' }}
+                                    style={{ width: '250px', height: '250px', borderRadius: 'var(--border-radius-original)' }}
                                 />
                             </StyledFlipCardBackSide>
                         </StyledFlipCardInner>

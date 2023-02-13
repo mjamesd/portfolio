@@ -1,5 +1,5 @@
 import React from 'react';
-import { LinkStyleButton } from './Styles';
+import { LinkStyleButton } from '../Styles';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
@@ -10,7 +10,7 @@ const StyledFooter = styled.footer`
 	height: 64px;
     background-color: var(--purple-light);
     color: var(--white);
-    font-family: 'Special Elite', cursive;
+    box-shadow: var(--box-shadow-reverse);
 `;
 
 const StyledFooterLinkStyleButton = styled(LinkStyleButton)`
@@ -38,13 +38,12 @@ const Footer = () => {
 	return (
 		<StyledFooter>
 			<StyledFooterLinkStyleButton
-				onClick={(e) => {
-					e.preventDefault();
+				onClick={() => {
 					window.open('https://pngtree.com/free-backgrounds', '_blank');
 				}}
 			>background images from pngtree.com
 			</StyledFooterLinkStyleButton>
-			<StyledP>&copy; {getYear()} DrumDev</StyledP>
+			<StyledP>&copy; 2021-{getYear()} DrumDev</StyledP>
 		</StyledFooter>
 	)
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from './NavBar';
 import MobileNavBar from './MobileNavBar';
 import styled from 'styled-components';
-import { LinkStyleButton } from './Styles';
+import { LinkStyleButton } from '../Styles';
 
 const StyledHeaderWrapper = styled.header`
     display: block;
@@ -18,9 +18,10 @@ const StyledHeader = styled.div`
     position: fixed;
     width: 96vw;
     height: 64px;
+    padding-inline: 2vw;
     background-color: var(--purple-light);
     color: #fff;
-    padding-inline: 2vw;
+    box-shadow: var(--box-shadow-hover);
     @media (min-width: 825px) {
         justify-content: space-between;
     }
@@ -28,6 +29,12 @@ const StyledHeader = styled.div`
 
 const HeaderLinkStyleButton = styled(LinkStyleButton)`
     cursor: default;
+    border-block-end: none;
+    color: var(--white);
+    &:hover {
+        color: var(--white-flat);
+    }
+    transition: all var(--transition-time-normal) ease-in-out;
 `;
 
 const Brand = styled.section`
@@ -35,11 +42,11 @@ const Brand = styled.section`
     grid-template-columns: 1fr 5fr;
     align-items: center;
     min-height: 100%;
-    transition: transform 350ms ease-in-out;
+    transition: transform var(--transition-time-normal) ease-in-out;
 `;
 
 const HeaderImage = styled.img`
-    transition: all 250ms ease-in-out;
+    transition: all var(--transition-time-fast) ease-in-out;
     width: 49px;
     margin-inline-end: 10px;
     clip-path: circle(45% at 50% 50%);

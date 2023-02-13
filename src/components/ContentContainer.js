@@ -5,14 +5,14 @@ const StyledMain = styled.main`
     width: calc(var(--body-vw) - 40px);
     margin-inline: auto;
     padding-inline: 1rem;
-    transition: opacity 250ms ease-in-out;
+    transition: opacity var(--transition-time-fast) ease-in-out;
 `;
 
 
-const ContentContainer = ({renderPage}) => {
+const ContentContainer = (props) => {
   return (
     <StyledMain id="contentContainer">
-      {renderPage()}
+      {props.renderPage()}
     </StyledMain>
   );
 }
