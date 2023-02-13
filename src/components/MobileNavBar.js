@@ -21,6 +21,10 @@ const StyledMobileNavList = styled.nav`
     transition: all var(--transition-time-normal) ease-in-out;
 `;
 
+const StyledNavButton = styled(NavButton)`
+    color: ${props => props.active ? "var(--white)" : "var(--black)"};
+`;
+
 const StyledMenuToggleI = styled.i`
     color: var(--white);
     transition: transform var(--transition-time-normal) ease-in-out;
@@ -74,7 +78,7 @@ const MobileNavBar = (props) => {
                 onClick={() => handleToggleMobileMenu() }
                 >menu</StyledMenuToggleI>
             <StyledMobileNavList id="mobileNavList" style={{transform: 'translateX(-110%)'}}>
-                <NavButton
+                <StyledNavButton
                     key='home'
                     active={props.currentPage === 'Home' ? true : false}
                     onClick={() => {props.handlePageChange('Home'); handleToggleMobileMenu();}}
@@ -82,8 +86,8 @@ const MobileNavBar = (props) => {
                     className="material-icons left"
                     active={props.currentPage === 'Home' ? true : false}
                 >home</StyledI>Home
-                </NavButton>
-                <NavButton
+                </StyledNavButton>
+                <StyledNavButton
                     key='about'
                     active={props.currentPage === 'About' ? true : false}
                     onClick={() => {props.handlePageChange('About'); handleToggleMobileMenu();}}
@@ -91,8 +95,8 @@ const MobileNavBar = (props) => {
                     className="material-icons left"
                     active={props.currentPage === 'About' ? true : false}
                 >account_circle</StyledI>About
-                </NavButton>
-                <NavButton
+                </StyledNavButton>
+                <StyledNavButton
                     key='portfolio'
                     active={props.currentPage === 'Portfolio' ? true : false}
                     onClick={() => {props.handlePageChange('Portfolio'); handleToggleMobileMenu();}}
@@ -100,8 +104,8 @@ const MobileNavBar = (props) => {
                     className="material-icons left"
                     active={props.currentPage === 'Portfolio' ? true : false}
                 >web</StyledI>Portfolio
-                </NavButton>
-                <NavButton
+                </StyledNavButton>
+                <StyledNavButton
                     key='contact'
                     active={props.currentPage === 'Contact' ? true : false}
                     onClick={() => {props.handlePageChange('Contact'); handleToggleMobileMenu();}}
@@ -109,7 +113,7 @@ const MobileNavBar = (props) => {
                     className="material-icons left"
                     active={props.currentPage === 'Contact' ? true : false}
                 >phonelink_ring</StyledI>Contact
-                </NavButton>
+                </StyledNavButton>
             </StyledMobileNavList>
         </StyledMobileNavBar>
     )
